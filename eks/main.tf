@@ -17,7 +17,7 @@ terraform {
 }
 # Variables
 variable "cluster_name" {
-  default     = "eks-vijay"
+  default     = "eks-charan"
   description = "give a cluster name"
   type        = string
 }
