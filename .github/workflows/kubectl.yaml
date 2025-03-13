@@ -37,5 +37,5 @@ jobs:
           --set githubConfigSecret.github_token="${{ secrets.GH_PAT }}" \
           oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
         kubectl get po -A
-        kubect get ns 
+        kubectl get ns 
         
