@@ -47,16 +47,16 @@ variable "eks_node_disk_size" {
 variable "availability_zones" {
   description = "List of availability zones to use"
   type        = list(string)
-  default     = ["eu-west-1", "eu-west-2", "eu-west-3"]
+  default     = ["eu-north-1a", "eu-north-1b", "eu-north-1c"]
 }
 
 variable "private_subnet_cidrs" {
   description = "Map of AZ to CIDR for private subnets"
   type        = map(string)
   default = {
-    "eu-west-1" = "192.168.0.0/20"
-    "eu-west-2" = "192.168.16.0/20"
-    "eu-west-3" = "192.168.32.0/20"
+    "eu-north-1a" = "192.168.0.0/20"
+    "eu-north-1b" = "192.168.16.0/20"
+    "eu-north-1c" = "192.168.32.0/20"
   }
 }
 
@@ -64,9 +64,9 @@ variable "public_subnet_cidrs" {
   description = "Map of AZ to CIDR for public subnets"
   type        = map(string)
   default = {
-    "eu-west-1" = "192.168.48.0/20"
-    "eu-west-2" = "192.168.64.0/20"
-    "eu-west-3" = "192.168.80.0/20"
+    "eu-north-1a" = "192.168.48.0/20"
+    "eu-north-1b" = "192.168.64.0/20"
+    "eu-north-1c" = "192.168.80.0/20"
   }
 }
 
@@ -485,7 +485,7 @@ resource "aws_eks_addon" "efs_csi" {
 resource "aws_eks_addon" "pod_identity_agent" {
   cluster_name  = aws_eks_cluster.main.name
   addon_name    = "eks-pod-identity-agent"
-  addon_version = "v1.3.5-eksbuild.1"  # Check latest version
+  addon_version = "v1.3.4-eksbuild.1"  # Check latest version
 
   depends_on = [
     aws_eks_node_group.main
