@@ -54,9 +54,9 @@ variable "private_subnet_cidrs" {
   description = "Map of AZ to CIDR for private subnets"
   type        = map(string)
   default = {
-    "us-east-1a" = "192.168.0.0/20"
-    "us-east-1b" = "192.168.16.0/20"
-    "us-east-1c" = "192.168.32.0/20"
+    "eu-west-1" = "192.168.0.0/20"
+    "eu-west-2" = "192.168.16.0/20"
+    "eu-west-3" = "192.168.32.0/20"
   }
 }
 
@@ -64,9 +64,9 @@ variable "public_subnet_cidrs" {
   description = "Map of AZ to CIDR for public subnets"
   type        = map(string)
   default = {
-    "us-east-1a" = "192.168.48.0/20"
-    "us-east-1b" = "192.168.64.0/20"
-    "us-east-1c" = "192.168.80.0/20"
+    "eu-west-1" = "192.168.48.0/20"
+    "eu-west-2" = "192.168.64.0/20"
+    "eu-west-3" = "192.168.80.0/20"
   }
 }
 
