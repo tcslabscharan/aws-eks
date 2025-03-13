@@ -1,8 +1,8 @@
 # Network configuration
 vpc_cidr   = "192.168.0.0/16" # Different from default to show customization
-aws_region = "us-east-1"   # AWS region for resource creation
+aws_region = "eu-north-1"   # AWS region for resource creation
 
-availability_zones = ["us-east-1a", "us-east-1b", "us-east-1c"]
+availability_zones = ["eu-west-1", "eu-west-2", "eu-west-3"]
 
 private_subnet_cidrs = {
   "us-east-1a" = "192.168.0.0/20"
